@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coversión de Kg a G</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p>Kilogramos convert to Gramos:</p>
+    <p>
+        <label>Kilogramos: </label>
+        <input id="inputKg" placeholder="Kilogramos [Kg]" type="number" oninput="PesoConverter(this.value)" onchange="PesoConverter(this.value)">
+    </p>
+    <p>Gramos: <span id="outputGr"></span></p>
+    <script>
+        function PesoConverter(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputGr").innerHTML=(valNum/0.0010000);
+        }
+    </script> 
+</body>
+</html>
